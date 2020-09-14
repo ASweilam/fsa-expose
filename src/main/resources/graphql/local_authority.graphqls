@@ -1,0 +1,15 @@
+type LocalAuthority {
+    code: ID!
+    name: String
+    website: String
+    email: String
+}
+
+type Query {
+    findAllLocalAuthorities: [LocalAuthority]!
+    countLocalAuthorities: Int!
+}
+
+type Mutation {
+    newLocalAuthority(code: ID!, name: String, website: String, email: String) : LocalAuthority!
+}

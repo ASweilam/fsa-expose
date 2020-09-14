@@ -1,0 +1,32 @@
+type EstablishmentDetail {
+    fhrs_id: ID!
+    local_authority_business_id: String
+    business_name: String
+    business_type: String
+    business_type_id: Int
+    address_line_1: String
+    address_line_2: String
+    address_line_3: String
+    address_line_4: String
+    postcode: String
+    rating_value: String
+    rating_key: String
+    rating_date: String
+    scores: String
+    scheme_type: String
+    new_rating_pending: Boolean
+    longitude: Float
+    latitude: Float
+    localAuthority: LocalAuthority!
+}
+
+extend type Query {
+    findAllEstablishmentDetails: [EstablishmentDetail]!
+    findEstablishmentDetail(fhrs_id: ID!): EstablishmentDetail!
+    countEstablishmentDetails: Int!
+}
+
+extend type Mutation {
+    newEstablishmentDetail(fhrs_id: ID!, local_authority_business_id: String, business_name: String, business_type: String, business_type_id: Int, address_line_1: String, address_line_2: String, address_line_3: String, address_line_4: String, postcode: String, rating_value: String, rating_key: String, rating_date: String, scores: String, scheme_type: String, new_rating_pending: Boolean, longitude: Float, latitude: Float, localAuthority: ID!) : EstablishmentDetail!
+    deleteEstablishmentDetail(fhrs_id: ID!) : Boolean
+}
