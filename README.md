@@ -17,28 +17,31 @@ The API allows CRUD operations (Create, Read, Update and Delete) on both establi
 ```bash
 http://localhost:8080/api/v1/details
 
-Create ==> POST request to the URL with the new record in the body of the request
+Create → POST request to the URL with the new record in the body of the request
 ```
 
 - To view/create all the Local Authorities records and create (post) a new Local Authority:
 ```bash
 http://localhost:8080/api/v1/authority
 
-Create ==> POST request to the URL with the new record in the body of the request
+Create → POST request to the URL with the new record in the body of the request
 ```
 
 - To view/delete/update a specific establishment detail record using the FHRSID:
 ```bash
 http://localhost:8080/api/v1/details/{fhrs_id}
 
-Update ==> PUT request with updated record in the body of the request
-Delete ==> DELETE request
+Update → PUT request with updated record in the body of the request
+Delete → DELETE request
 
 ```
 
 - To view/delete/update a specific local authority record using the local authority code:
 ```bash
 http://localhost:8080/api/v1/authority/{code}
+
+Update → PUT request with updated record in the body of the request
+Delete → DELETE request
 ```
 
 ## The data
